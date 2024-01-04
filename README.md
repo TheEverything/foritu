@@ -21,10 +21,6 @@
 - [ ] "npm i @tanstack/react-query"
 - [ ] add providers/query-provider.tsx and wrap layout.tsx's children
 
-- [ ] npm i uuid
-- [ ] npm i -D @types/uuid
-- [ ] note: import { v4 as uuid } from "uuid"; when it needed
-
 - [ ] create coachroachdb cluster
 - [ ] press connect -> create new sql user -> copy password -> copy general connection string -> paste to .env as DATABASE_URL
 - [ ] "npm i -D prisma"
