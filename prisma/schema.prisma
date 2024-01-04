@@ -1,0 +1,57 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "cockroachdb"
+  url      = env("DATABASE_URL")
+}
+
+enum Type {
+  FALL
+  SPRING
+  SUMMER
+}
+
+model Semester {
+  id    String @id @default(uuid())
+  title String
+  type  Type
+  year  String
+
+  lectures Lecture[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Lecture {
+  id     String @id @default(uuid())
+  title  String
+  credit Int
+
+  grades Grade[]
+
+  semesterId String
+  semester   Semester @relation(fields: [semesterId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Grade {
+  id          String  @id @default(uuid())
+  title       String
+  note        Int
+  isAnnounced Boolean
+  percentage  Int
+
+  lectureId String
+  lecture   Lecture @relation(fields: [lectureId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

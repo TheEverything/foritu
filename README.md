@@ -10,30 +10,24 @@
 - [x] change text lineheights to 1em in tailwind.config.ts -> theme -> extend -> fontSize
 - [x] "npm i tailwind-scrollbar-hide" than add require("tailwind-scrollbar-hide") to tailwind.config.ts
 
-- [ ] "npm i @clerk/nextjs"
-- [ ] create clerk project
-- [ ] add .env keys and .env after sign out shits
-- [ ] add providers/clerk-provider.tsx and add wrap layout.tsx's children
-- [ ] add middleware.ts
-- [ ] add app/(auth)
+- [x] "npm i @clerk/nextjs"
+- [x] create clerk project
+- [x] add .env keys and .env after sign out shits
+- [x] add providers/clerk-provider.tsx and add wrap layout.tsx's children
+- [x] add middleware.ts
+- [x] add app/(auth)
 
-- [ ] "npm i axios"
-- [ ] "npm i @tanstack/react-query"
-- [ ] add providers/query-provider.tsx and wrap layout.tsx's children
+- [x] "npm i axios"
+- [x] "npm i @tanstack/react-query"
+- [x] add providers/query-provider.tsx and wrap layout.tsx's children
 
-- [ ] npm i uuid
-- [ ] npm i -D @types/uuid
-- [ ] note: import { v4 as uuid } from "uuid"; when it needed
-
-- [ ] create coachroachdb cluster
-- [ ] press connect -> create new sql user -> copy password -> copy general connection string -> paste to .env as DATABASE_URL
-- [ ] "npm i -D prisma"
-- [ ] "npm i @prisma/client"
-- [ ] "npx prisma init"
-- [ ] create lib/db.ts
-- [ ] add "postinstall": "prisma generate" to package.json's scripts
-- [ ] change datasource db provider to cockroachdb in schema.prisma
-- [ ] note: "npx prisma generate" and "npx prisma db push" whenever schemas have changed
-- [ ] note: "npx prisma studio" to manage content
-- [ ] create Profile schema to keep users better
-- [ ] create lib/initial-profile.ts and lib/current-profile.ts
+- [x] create coachroachdb cluster and rename cluster
+- [x] press connect -> create new sql user -> add sql username -> press next -> copy general connection string -> paste to .env as DATABASE_URL
+- [x] "npm i -D prisma"
+- [x] "npm i @prisma/client"
+- [x] "npx prisma init"
+- [x] create lib/db.ts
+- [x] add "postinstall": "prisma generate" to package.json's scripts field
+- [x] change datasource db -> provider to cockroachdb in schema.prisma
+- [x] note: "npx prisma generate" and "npx prisma db push" whenever schemas have changed
+- [x] note: "npx prisma studio" to manage content
