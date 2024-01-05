@@ -4,7 +4,7 @@ async function Page() {
   const allSemesters = await db.semester.findMany({
     include: { lectures: true }
   });
-  console.log(allSemesters[0].lectures);
+
   return (
     <div className="h-full flex flex-col justify-center items-center">
       {allSemesters.map((semester) => (
