@@ -1,6 +1,7 @@
 import db from "@/lib/db";
 import { cn } from "@/lib/utils";
 import { Semester } from "@prisma/client";
+import LectureItem from "./LectureItem";
 
 interface Props {
   className?: string;
@@ -17,7 +18,7 @@ async function SemesterItem({ className, semester }: Props) {
       <p className="w-full h-fit font-semibold text-stone-500 text-base text-start">{semester.title}</p>
       <div className="w-full h-fit flex flex-col justify-start items-center gap-3 ">
         {lecturesById.map((lecture) => (
-          <LectureItem key={lecture.id} className="w-full h-fit" />
+          <LectureItem lecture={lecture} key={lecture.id} className="w-full h-fit" />
         ))}
       </div>
     </div>
